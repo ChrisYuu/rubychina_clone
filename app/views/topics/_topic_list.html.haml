@@ -1,0 +1,16 @@
+%ul.topics.box
+  - @topics.each do |topic|
+    %li
+      %a.span1(href="")
+        %img(src="#{gravatar_url('joe@example.com')}")
+        %article.span7
+          %p.topic_title
+            = topic.title 
+          %p.topic_info
+            = link_to "分享", nil, class: "node"
+            %span= "  •  "
+            = link_to "knwang", nil, class: "user_link"
+            %span= "  •  "
+            = "published #{time_ago_in_words(topic.created_at)} mintes ago"
+        %p.replies.span1
+          %span 12
