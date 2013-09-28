@@ -1,4 +1,5 @@
 RubychinaClone::Application.routes.draw do
+  root :to => 'topics#index'
   get "ui/new_topic" 
   get "ui/node"
   get "ui/signin"
