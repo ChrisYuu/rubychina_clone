@@ -1,4 +1,4 @@
-= render 'shared/breadcrumb', links: [["Home", ""], ["社区", ""]]
+= render 'shared/breadcrumb', links: [["Home", root_path], ["社区", topics_path]]
 
 %section#topics
   %section#topics_info.box.box-gray.info-box
@@ -6,7 +6,7 @@
     = render 'topic_list', topics: @topics
 %section#sidebar
   %section#new_topic.box
-    = link_to "发布新帖", nil, class: "btn btn-success"
+    = link_to "发布新帖", new_topic_path, class: "btn btn-success"
     %section#stats.box
       %ul
         %li 社区会员: 429 人 

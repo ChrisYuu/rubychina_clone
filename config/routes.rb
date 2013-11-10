@@ -8,7 +8,7 @@ RubychinaClone::Application.routes.draw do
   get "ui/topics"
   get "ui/user"
   resources :ui
-  resources :topics, only: [:index, :show]
+  resources :topics, only: [:index, :show, :new, :create]
   resources :nodes, only: [:show]
   resources :users, only: [:show, :create]
   match 'sign_up', to: "users#new", via: [:get, :post]
