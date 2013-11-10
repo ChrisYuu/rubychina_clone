@@ -12,7 +12,9 @@ class TopicsController < ApplicationController
   end
 
   def create
-    Topic.create(params[:topic])
+    #render text: params[:topic].inspect
+    Topic.create(params[:topic].permit(:title, :content, :node_id))
     redirect_to root_path
   end
+
 end
