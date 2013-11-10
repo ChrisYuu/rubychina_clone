@@ -10,7 +10,8 @@ RubychinaClone::Application.routes.draw do
   resources :ui
   resources :topics, only: [:index, :show]
   resources :nodes, only: [:show]
-  resources :users, only: [:show]
+  resources :users, only: [:show, :create]
+  match 'sign_up', to: "users#new", via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # ge
   # See how all your routes lay out with "rake routes".
