@@ -5,7 +5,7 @@
         %img(src="#{gravatar_url('joe@example.com')}")
         %article.span7
           %p.topic_title
-            = topic.title 
+            = link_to topic.title, topic
           %p.topic_info
             = link_to topic.node.name, topic.node, class: "node"
             %span= "  •  "

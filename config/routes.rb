@@ -8,7 +8,7 @@ RubychinaClone::Application.routes.draw do
   get "ui/topics"
   get "ui/user"
   resources :ui
-  resources :topics, only: [:index]
+  resources :topics, only: [:index, :show]
   resources :nodes, only: [:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # ge
