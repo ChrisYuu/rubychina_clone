@@ -10,6 +10,7 @@ RubychinaClone::Application.routes.draw do
   resources :ui
   resources :topics, only: [:index, :show]
   resources :nodes, only: [:show]
+  resources :users, only: [:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # ge
   # See how all your routes lay out with "rake routes".
