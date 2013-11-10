@@ -12,6 +12,8 @@ RubychinaClone::Application.routes.draw do
   resources :nodes, only: [:show]
   resources :users, only: [:show, :create]
   match 'sign_up', to: "users#new", via: [:get, :post]
+  get 'sign_in', to: "sessions#new"
+  resource :sessions, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # ge
   # See how all your routes lay out with "rake routes".
